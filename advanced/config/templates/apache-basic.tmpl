@@ -1,0 +1,24 @@
+	
+<VirtualHost *>
+    ServerAdmin webmaster@%SITENAME%
+    DocumentRoot %SITEDIR%
+
+    ServerName www.%SITENAME%
+    ServerAlias %SITENAME%
+    Options All
+
+    <Directory "%SITEDIR%">
+       Options All
+       AllowOverride All
+       Order allow,deny
+       Allow from all
+    </Directory>
+
+    ErrorLog /var/log/apache2/%SITENAME%_error.log
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    CustomLog /var/log/apache2/%SITENAME%_access.log combined
+</VirtualHost>
