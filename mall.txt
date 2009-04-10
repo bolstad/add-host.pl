@@ -1,0 +1,25 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@DOMAIN
+    DocumentRoot  /var/www/virtual/DOMAIN
+
+    ServerName DOMAIN
+    ServerAlias www.DOMAIN
+
+
+    Options All
+    <Directory "/var/www/virtual/DOMAIN">
+       Options All
+       AllowOverride All
+       Order allow,deny
+       Allow from all
+    </Directory>
+
+    ErrorLog LOGDIR/DOMAIN_error.log
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    CustomLog LOGDIR/DOMAIN_access.log combined
+</VirtualHost>
+
