@@ -1,3 +1,4 @@
+# template for add-host.pl
 <VirtualHost *:80>
     ServerAdmin webmaster@DOMAIN
     DocumentRoot  /var/www/virtual/DOMAIN
