@@ -6,7 +6,7 @@ use strict; use warnings;
 my $template = "mall.txt";
 my $deploy_dir; my $log_path;
 
-my @apache_dirs = ('/etc/apache2/sites-enabled/','/etc/httpd/sites/');
+my @apache_dirs = ('/etc/apache2/sites-enabled/','/etc/httpd/sites/','/private/etc/apache2/other/');
 my @log_dirs = ('/var/log/httpd','/var/log/apache2');
 
 my $virtual_dir = "/var/www/virtual/";
