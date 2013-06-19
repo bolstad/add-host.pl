@@ -1,0 +1,27 @@
+# template for add-host.pl
+<VirtualHost *:80>
+    ServerAdmin webmaster@DOMAIN
+    DocumentRoot  /var/www/virtual/hippies/DOMAIN
+
+    ServerName DOMAIN
+    ServerAlias www.DOMAIN
+
+
+    Options All
+    <Directory "/var/www/virtual/hippies/DOMAIN">
+       Options All
+       AllowOverride All
+       Order allow,deny
+       Allow from all
+    </Directory>
+
+#    ErrorLog LOGDIR/DOMAIN_error.log
+    ErrorLog /var/www/virtual/hippies/DOMAIN/error.log
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    CustomLog LOGDIR/DOMAIN_access.log combined
+</VirtualHost>
+
